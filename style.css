@@ -10,6 +10,8 @@ body {
   font-family: 'Noto Sans Bamum', sans-serif;
   letter-spacing: -.02em;
   padding: 10px;
+  background-color: #2e2e2e;
+  color: rgb(239, 239, 219);
 }
 
 .header {
@@ -32,7 +34,7 @@ body {
 a {
   font-size: larger;
   text-decoration: none;
-  color: navy;
+  color: rgb(156, 92, 239);
   font-weight: 700;
   padding: 5px 15px 5px 15px;
   border-radius: 5px;
@@ -174,7 +176,7 @@ img {
 }
 
 .detail {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 4px 8px 0 rgba(239, 232, 232, 0.2), 0 6px 20px 0 rgba(241, 234, 234, 0.19);
   border-radius: 15px;
   display: flex;
   flex-direction: column;
@@ -182,6 +184,7 @@ img {
   align-items: center;
   padding: 30px 0;
   row-gap: 15px;
+  background-color: rgb(210, 208, 208);
 }
 
 .email {
