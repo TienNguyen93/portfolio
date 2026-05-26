@@ -1,0 +1,60 @@
+[
+  {
+    "title": "Brazilian E-Commerce Data Pipeline with Databricks",
+    "category": "Python",
+    "tagVariant": "secondary",
+    "description": "An end-to-end ETL pipeline built on Databricks to analyze Brazilian e-commerce data, demonstrating production-grade data engineering practices using Medallion architecture, Spark optimization, and AI-powered business intelligence.",
+    "tech": [
+      "Python",
+      "Data Analytics",
+      "SQL",
+      "PySpark",
+      "Databricks"
+    ],
+    "link": "https://github.com/TienNguyen93/olist-project"
+  },
+  {
+    "title": "HVAC Business Automation — n8n AI Workflow",
+    "category": "n8n",
+    "tagVariant": "default",
+    "description": "Built a fully automated client inquiry and job management system for a real Brooklyn-based HVAC company. The project simulates end-to-end business automation using local AI and no-code workflow tools.",
+    "tech": [
+      "n8n",
+      "Notion",
+      "Ollama",
+      "Gmail",
+      "CRM"
+    ],
+    "link": "https://github.com/TienNguyen93/hvac-n8n"
+  },
+  {
+    "title": "Credit Card Fraud Detection",
+    "category": "Python",
+    "tagVariant": "success",
+    "description": "Early fraud detection system ",
+    "tech": [
+      "Python",
+      "Scikit-learn",
+      "Excel",
+      "Data Analytics",
+      "Data Visualization",
+      "Data Cleaning"
+    ],
+    "link": "https://github.com/TienNguyen93/credit-card-fraud"
+  },
+  {
+    "title": "Clinical Note Generation",
+    "category": "Python",
+    "tagVariant": "default",
+    "description": "Clinical Generation from Doctor-Patient conversation",
+    "tech": [
+      "Python",
+      "NumPy ",
+      "Data Cleaning",
+      "Data Analytics",
+      "Data Visualization",
+      "Machine Learning"
+    ],
+    "link": "https://github.com/TienNguyen93/clinical-generation"
+  }
+]
