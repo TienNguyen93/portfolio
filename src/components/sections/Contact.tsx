@@ -21,8 +21,9 @@ export const Contact: React.FC = () => {
           </div>
 
           <div className="text-theme-cloudy/90 font-medium flex flex-col gap-2">
-            <p><strong>Location:</strong> New York City, New York &middot; Available from January 2026</p>
-            <p><strong>Status:</strong> Open to AI/ML roles &middot; Full-time &middot; Part-time &middot; Volunteer</p>
+            <p><strong>Location:</strong> Queens, NY</p>
+            <p><strong>Email:</strong> <a href="mailto:nguyentien9933@gmail.com" className="hover:underline">nguyentien9933@gmail.com</a></p>
+            <p><strong>Phone:</strong> <a href="tel:3476306707" className="hover:underline">347-630-6707</a></p>
           </div>
         </div>
       </div>

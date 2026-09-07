@@ -31,11 +31,14 @@ export const Hero: React.FC = () => {
           </div>
         </div>
 
-        <nav className="flex flex-row md:flex-col gap-6 text-right w-full md:w-auto overflow-x-auto pb-6 md:pb-4 pt-4 md:pt-0 px-2">
-          <a href="#about" className="font-sans text-[1.7rem] text-theme-crail hover:text-theme-cloudy hover:underline underline-offset-8 decoration-4 transition-all tracking-wider drop-shadow-md whitespace-nowrap">About</a>
-          <a href="#projects" className="font-sans text-[1.7rem] text-theme-crail hover:text-theme-cloudy hover:underline underline-offset-8 decoration-4 transition-all tracking-wider drop-shadow-md whitespace-nowrap">Projects</a>
-          <a href="#experience" className="font-sans text-[1.7rem] text-theme-crail hover:text-theme-cloudy hover:underline underline-offset-8 decoration-4 transition-all tracking-wider drop-shadow-md whitespace-nowrap">Experience</a>
-          <a href="#contact" className="font-sans text-[1.7rem] text-theme-crail hover:text-theme-cloudy hover:underline underline-offset-8 decoration-4 transition-all tracking-wider drop-shadow-md whitespace-nowrap">Contact</a>
+        <nav className="flex flex-row md:flex-col gap-4 text-right w-full md:w-auto overflow-x-auto pb-6 md:pb-4 pt-4 md:pt-0 px-2">
+          <a href="#about" className="font-sans text-[1.5rem] md:text-[1.7rem] text-theme-crail hover:text-theme-cloudy hover:underline underline-offset-8 decoration-4 transition-all tracking-wider drop-shadow-md whitespace-nowrap">About</a>
+          <a href="#projects" className="font-sans text-[1.5rem] md:text-[1.7rem] text-theme-crail hover:text-theme-cloudy hover:underline underline-offset-8 decoration-4 transition-all tracking-wider drop-shadow-md whitespace-nowrap">Projects</a>
+          <a href="#experience" className="font-sans text-[1.5rem] md:text-[1.7rem] text-theme-crail hover:text-theme-cloudy hover:underline underline-offset-8 decoration-4 transition-all tracking-wider drop-shadow-md whitespace-nowrap">Experience</a>
+          <a href="#education" className="font-sans text-[1.5rem] md:text-[1.7rem] text-theme-crail hover:text-theme-cloudy hover:underline underline-offset-8 decoration-4 transition-all tracking-wider drop-shadow-md whitespace-nowrap">Education</a>
+          <a href="#certifications" className="font-sans text-[1.5rem] md:text-[1.7rem] text-theme-crail hover:text-theme-cloudy hover:underline underline-offset-8 decoration-4 transition-all tracking-wider drop-shadow-md whitespace-nowrap">Certifications</a>
+          <a href="#skills" className="font-sans text-[1.5rem] md:text-[1.7rem] text-theme-crail hover:text-theme-cloudy hover:underline underline-offset-8 decoration-4 transition-all tracking-wider drop-shadow-md whitespace-nowrap">Skills</a>
+          <a href="#contact" className="font-sans text-[1.5rem] md:text-[1.7rem] text-theme-crail hover:text-theme-cloudy hover:underline underline-offset-8 decoration-4 transition-all tracking-wider drop-shadow-md whitespace-nowrap">Contact</a>
         </nav>
       </div>
     </section>

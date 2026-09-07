@@ -3,21 +3,19 @@
     "title": "Brazilian E-Commerce Data Pipeline with Databricks",
     "category": "Python",
     "tagVariant": "secondary",
-    "description": "An end-to-end ETL pipeline built on Databricks to analyze Brazilian e-commerce data, demonstrating production-grade data engineering practices using Medallion architecture, Spark optimization, and AI-powered business intelligence.",
+    "description": "Processed 100K+ order records across 8 sources by building Medallion architecture ETL pipeline on Databricks Lakeflow. Generated 15+ key BI metrics by deploying AI/BI dashboards and leveraging Genie AI for sentiment analysis.",
     "tech": [
       "Python",
       "Data Analytics",
-      "SQL",
-      "PySpark",
-      "Databricks"
+      "SQL"
     ],
-    "link": "https://github.com/TienNguyen93/olist-project"
+    "link": null
   },
   {
     "title": "HVAC Business Automation — n8n AI Workflow",
     "category": "n8n",
     "tagVariant": "default",
-    "description": "Built a fully automated client inquiry and job management system for a real Brooklyn-based HVAC company. The project simulates end-to-end business automation using local AI and no-code workflow tools.",
+    "description": "Built n8n automation workflow to reduce manual client intake by logging structured records into Notion CRM. Reduced client response time to < 1 minute by integrating AI agent to generate and send personalized emails via Gmail.",
     "tech": [
       "n8n",
       "Notion",
@@ -25,7 +23,7 @@
       "Gmail",
       "CRM"
     ],
-    "link": "https://github.com/TienNguyen93/hvac-n8n"
+    "link": null
   },
   {
     "title": "Credit Card Fraud Detection",

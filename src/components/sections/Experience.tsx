@@ -6,21 +6,38 @@ export const Experience: React.FC = () => {
   const experiences = [
     {
       role: 'Software Automation Engineer Intern',
-      company: 'ULimo · Part-time',
-      date: 'Feb 2026 - Present',
+      company: 'ULimo · New York, NY',
+      date: 'Feb 2026 - Sep 2026',
       bullets: [
-        'Scale Instagram client outreach from 1 to 10 contacts per session (900% increase) by building a Python automation bot with Map-based caching for improved lookup efficiency and Excel integration for tracking DM status and contact history',
-        'Increase automated follower acquisition by 20% (25 to 30 per run) by enhancing Instagram bot to auto-dismiss confirmation panels, reducing manual intervention'
+        'Reduced lead processing time to ~5 min/lead by developing a n8n proof-of-concept outreach automation workflow',
+        'Defined product positioning for AI Travel Agent through market analysis of ride-share and AI trip planners',
+        'Enhanced AI Travel Agent UI/UX on Lovable by implementing role prompting with structured Markdown formatting',
+        'Increased automated follower acquisition by 20% by refining bot decision logic and error-handling pipelines for edge cases',
+        'Built and tested automation solutions across reservation bookings, marketing workflows, customer interactions, chatbots',
+        'Partnered with leadership to deploy automation tools and track key operational performance metrics'
       ],
     },
     {
-      role: 'Software Engineer Volunteer',
-      company: 'Develop for Good',
-      date: 'May 2023 - Sep 2023',
+      role: 'PwC x YouthBuild Consulting Analyst Extern',
+      company: 'Extern · Remote',
+      date: 'July 2026 - Aug 2026',
       bullets: [
-        'Increased website load speed by 50% by refactoring the codebase and optimizing functions in JavaScript',
-        'Improved form security and user experience by reducing invalid submissions by 20% by implementing error validation on login/signup pages using MUI components',
-        'Expanded project tracking capabilities to support 4 new corporate partners by developing 5 new features in the dashboard’s history section using Next.js'
+        'Communicated human-AI collaboration recommendations clearly to YouthBuild Global’s CEO and PwC mentors',
+        'Accelerated donor prospect research by 30% with AI tools that synthesized 10+ sources, saving 5+ hours weekly',
+        'Engineered Corporate Donor Journey Map targeting >2.5% email CTR, >35% video play rate, >15% web conversion',
+        'Developed fundraising system targeting $50K+ cohort funding, >14-day contract execution, 85%+ donor renewal rate'
+      ],
+    },
+    {
+      role: 'Data Analyst/AI Engineer Intern',
+      company: 'Congero Technology Group · Remote',
+      date: 'June 2026 - July 2026',
+      bullets: [
+        'Reduced query resolution across 8+ PostgreSQL schemas to 5 targeted tables by building a hybrid RAG AI Agent',
+        'Improved retrieval accuracy by engineering an LLM-driven contextual enrichment pipeline before vectorization',
+        'Delivered full-stack proof-of-concept AI agent using FastAPI and React to enable multi-turn, session-based conversations',
+        'Led a team of 3 to configure 12 pricing models for 2 AI products in Oracle BRM to simulate scalable SaaS billing',
+        'Built Tableau dashboards to visualize key revenue KPIs from configured product offerings for managers and stakeholders'
       ],
     }
   ];
@@ -63,3 +80,4 @@ export const Experience: React.FC = () => {
     </section>
   );
 };
+
