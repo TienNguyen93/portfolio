@@ -7,6 +7,8 @@ import projectsData from '../../data/projects.json';
 export const Projects: React.FC = () => {
   const projects = projectsData as Array<{
     title: string;
+    slug?: string;
+    hasDetailPage?: boolean;
     category: string;
     tagVariant: "default" | "primary" | "secondary" | "success" | "warning" | "danger";
     description: string;
@@ -22,8 +24,16 @@ export const Projects: React.FC = () => {
         </Typography>
         <div className="grid md:grid-cols-2 gap-8">
           {projects.map((proj, idx) => (
-            <Card key={idx} className="p-8 flex flex-col h-full">
-              <Typography variant="headline-md" className="text-theme-cloudy mb-4 font-bold drop-shadow-md">
+            <Card 
+              key={idx} 
+              className={`p-8 flex flex-col h-full ${proj.hasDetailPage ? 'cursor-pointer group' : ''}`}
+              onClick={() => {
+                if (proj.hasDetailPage && proj.slug) {
+                  window.location.hash = `#/projects/${proj.slug}`;
+                }
+              }}
+            >
+              <Typography variant="headline-md" className={`text-theme-cloudy mb-4 font-bold drop-shadow-md ${proj.hasDetailPage ? 'group-hover:text-theme-crail transition-colors' : ''}`}>
                 {proj.title}
               </Typography>
               <Typography variant="body-md" className="text-theme-cloudy/90 mb-6 flex-grow font-semibold leading-relaxed">
@@ -39,8 +49,25 @@ export const Projects: React.FC = () => {
                 </div>
               )}
               <div className="flex flex-wrap gap-2 mt-auto">
+                {proj.hasDetailPage && proj.slug && (
+                  <Button 
+                    variant="primary" 
+                    size="sm"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      window.location.hash = `#/projects/${proj.slug}`;
+                    }}
+                  >
+                    View Case Study &rarr;
+                  </Button>
+                )}
                 {proj.link && (
-                  <a href={proj.link} target="_blank" rel="noopener noreferrer">
+                  <a 
+                    href={proj.link} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    onClick={(e) => e.stopPropagation()}
+                  >
                     <Button variant="secondary" size="sm">
                       View Source
                     </Button>

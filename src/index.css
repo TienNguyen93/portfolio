@@ -1,39 +1,286 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=JetBrains+Mono:wght@400;500&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --bg: #FAF9F6;
+  --text: #1C1C1E;
+  --line: #E5E5EA;
+  --muted: #6C6C70;
+  --chip: #EFEFEF;
+  --accent: #C15F3C;
+  --accent-light: rgba(193, 95, 60, 0.12);
+  --card-bg: #FFFFFF;
+  --shadow: rgba(0, 0, 0, 0.04);
+}
+
+html.dark {
+  --bg: #121212;
+  --text: #F2F2F7;
+  --line: #2C2C2E;
+  --muted: #98989D;
+  --chip: #1C1C1E;
+  --accent: #E07A5F;
+  --accent-light: rgba(224, 122, 95, 0.15);
+  --card-bg: #1A1A1E;
+  --shadow: rgba(0, 0, 0, 0.3);
+}
+
 @layer base {
+  html {
+    scroll-behavior: smooth;
+    color-scheme: light dark;
+  }
+
   body {
-    color: #2C2A26;
-    background-color: #F4F3EE;
-    font-family: theme('fontFamily.sans');
-    background-image: none;
-    background-attachment: fixed;
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    transition: background-color 0.25s ease, color 0.25s ease;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
   }
-  
-  @keyframes float {
-    0%, 100% { transform: translateY(0px) rotate(0deg); }
-    50% { transform: translateY(-15px) rotate(3deg); }
-  }
-  .animate-float {
-    animation: float 4s ease-in-out infinite;
-  }
-  
-  @keyframes sway {
-    0%, 100% { transform: rotate(0deg); }
-    25% { transform: rotate(6deg); }
-    75% { transform: rotate(-6deg); }
-  }
-  .hover\:animate-sway:hover {
-    animation: sway 1.5s ease-in-out infinite;
-  }
-
-
 
   h1, h2, h3, h4, h5, h6 {
-    color: #2C2A26;
-    font-family: theme('fontFamily.sans');
+    color: var(--text);
+    font-family: 'Inter', system-ui, sans-serif;
+    letter-spacing: -0.02em;
   }
+}
+
+/* Custom Component Utility Classes */
+@layer components {
+  /* Topbar & Navigation */
+  .topbar-nav {
+    background-color: var(--bg);
+    border-bottom: 1px solid var(--line);
+    transition: background-color 0.25s ease, border-color 0.25s ease;
+  }
+
+  .nav-link {
+    color: var(--muted);
+    transition: color 0.2s ease;
+    font-weight: 500;
+  }
+
+  .nav-link:hover, .nav-link.active {
+    color: var(--text);
+  }
+
+  .nav-link.active {
+    font-weight: 600;
+  }
+
+  /* Left Sticky TOC Rail */
+  .toc-rail {
+    position: sticky;
+    top: 6rem;
+    align-self: start;
+  }
+
+  .toc-item {
+    display: block;
+    color: var(--muted);
+    font-size: 0.875rem;
+    padding: 0.35rem 0.75rem;
+    border-left: 2px solid transparent;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    font-weight: 400;
+  }
+
+  .toc-item:hover {
+    color: var(--text);
+    border-left-color: var(--line);
+  }
+
+  .toc-item.active {
+    color: var(--accent);
+    border-left-color: var(--accent);
+    font-weight: 600;
+    background-color: var(--accent-light);
+    border-radius: 0 0.375rem 0.375rem 0;
+  }
+
+  /* Lens Filters / Role Filter Bar */
+  .lens-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: center;
+    padding: 0.5rem 0;
+  }
+
+  .lens-chip {
+    background-color: var(--chip);
+    color: var(--muted);
+    border: 1px solid var(--line);
+    padding: 0.35rem 0.85rem;
+    border-radius: 9999px;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    user-select: none;
+  }
+
+  .lens-chip:hover {
+    color: var(--text);
+    border-color: var(--muted);
+  }
+
+  .lens-chip.active {
+    background-color: var(--text);
+    color: var(--bg);
+    border-color: var(--text);
+    font-weight: 600;
+  }
+
+  .lens-chip-clear {
+    background-color: transparent;
+    color: var(--accent);
+    border: 1px dashed var(--accent);
+    padding: 0.35rem 0.85rem;
+    border-radius: 9999px;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .lens-chip-clear:hover {
+    background-color: var(--accent-light);
+  }
+
+  /* Impact Prose */
+  .impact-prose {
+    font-family: 'Newsreader', Georgia, serif;
+    font-size: 1.25rem;
+    line-height: 1.7;
+    color: var(--text);
+    background-color: var(--card-bg);
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--accent);
+    padding: 1.5rem 1.75rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 8px var(--shadow);
+  }
+
+  .impact-prose em, .impact-prose strong {
+    color: var(--accent);
+    font-style: normal;
+    font-weight: 600;
+  }
+
+  /* Experiment / Experience & Build Cards */
+  .content-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--line);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .content-card:hover {
+    border-color: var(--accent);
+    box-shadow: 0 4px 12px var(--shadow);
+  }
+
+  /* Custom Chips */
+  .chip-item {
+    background-color: var(--chip);
+    color: var(--text);
+    border: 1px solid var(--line);
+    padding: 0.25rem 0.65rem;
+    border-radius: 0.375rem;
+    font-size: 0.75rem;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 500;
+  }
+
+  /* Interactive Popover Modal */
+  .modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    animation: fadeIn 0.2s ease-out forwards;
+  }
+
+  .modal-card {
+    background-color: var(--card-bg);
+    color: var(--text);
+    border: 1px solid var(--line);
+    border-radius: 1rem;
+    width: 100%;
+    max-width: 500px;
+    padding: 1.75rem;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    animation: scaleUp 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  /* Accent Highlight Button */
+  .btn-accent {
+    background-color: var(--accent);
+    color: #FFFFFF;
+    border-radius: 0.5rem;
+    padding: 0.625rem 1.25rem;
+    font-weight: 600;
+    transition: opacity 0.2s ease, transform 0.15s ease;
+  }
+
+  .btn-accent:hover {
+    opacity: 0.92;
+    transform: translateY(-1px);
+  }
+
+  .btn-outline {
+    background-color: transparent;
+    color: var(--text);
+    border: 1px solid var(--line);
+    border-radius: 0.5rem;
+    padding: 0.625rem 1.25rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+  }
+
+  .btn-outline:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+}
+
+/* Keyframes */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleUp {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(1.15); }
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #10B981;
+  display: inline-block;
+  box-shadow: 0 0 8px rgba(16, 185, 129, 0.6);
+  animation: pulseGlow 2s infinite ease-in-out;
 }

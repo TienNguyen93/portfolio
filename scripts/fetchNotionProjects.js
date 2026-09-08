@@ -62,7 +62,7 @@ async function run() {
     const tagVariant = variants[title.length % variants.length];
     const category = tech[0] || 'Project';
 
-    return {
+    const projectObj = {
       title,
       category,
       tagVariant,
@@ -70,7 +70,32 @@ async function run() {
       tech,
       link
     };
+
+    if (title.toLowerCase().includes('donor segmentation')) {
+      projectObj.slug = 'donor-segmentation';
+      projectObj.hasDetailPage = true;
+    }
+
+    return projectObj;
   });
+
+  const hasDonorSegmentation = projects.some(p => p.slug === 'donor-segmentation');
+  if (!hasDonorSegmentation) {
+    projects.unshift({
+      title: "Donor Segmentation & Personalized Communication",
+      slug: "donor-segmentation",
+      hasDetailPage: true,
+      category: "n8n",
+      tagVariant: "secondary",
+      description: "An n8n automation workflow that divides donors into RFM and behavioral segmentation, sends personalized thank-you notes, reducing staff time spent on acknowledgments while maintaining a warm, authentic, donor-specific tone.",
+      tech: [
+        "n8n",
+        "Ollama",
+        "Google Sheets"
+      ],
+      link: null
+    });
+  }
 
   console.log(`Parsed ${projects.length} projects.`);
 

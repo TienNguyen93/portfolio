@@ -13,7 +13,6 @@ export const Experience: React.FC = () => {
         'Defined product positioning for AI Travel Agent through market analysis of ride-share and AI trip planners',
         'Enhanced AI Travel Agent UI/UX on Lovable by implementing role prompting with structured Markdown formatting',
         'Increased automated follower acquisition by 20% by refining bot decision logic and error-handling pipelines for edge cases',
-        'Built and tested automation solutions across reservation bookings, marketing workflows, customer interactions, chatbots',
         'Partnered with leadership to deploy automation tools and track key operational performance metrics'
       ],
     },

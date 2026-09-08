@@ -1,5 +1,19 @@
 [
   {
+    "title": "Donor Segmentation & Personalized Communication",
+    "slug": "donor-segmentation",
+    "hasDetailPage": true,
+    "category": "n8n",
+    "tagVariant": "secondary",
+    "description": "An n8n automation workflow that divides donors into RFM and behavioral segmentation, sends personalized thank-you notes, reducing staff time spent on acknowledgments while maintaining a warm, authentic, donor-specific tone.",
+    "tech": [
+      "n8n",
+      "Ollama",
+      "Google Sheets"
+    ],
+    "link": null
+  },
+  {
     "title": "Brazilian E-Commerce Data Pipeline with Databricks",
     "category": "Python",
     "tagVariant": "secondary",
