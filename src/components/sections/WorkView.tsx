@@ -12,8 +12,7 @@ export const WorkView: React.FC<WorkViewProps> = ({ onOpenDonorSegmentation }) =
 
   const tocItems = [
     { id: 'tldr', label: 'tl;dr' },
-    { id: 'current', label: 'current' },
-    { id: 'previously', label: 'previously' },
+    { id: 'previously', label: 'experience' },
     { id: 'education', label: 'education' },
     { id: 'builds', label: 'builds' },
     { id: 'skills-tools', label: 'skills & tools' },
@@ -134,129 +133,108 @@ export const WorkView: React.FC<WorkViewProps> = ({ onOpenDonorSegmentation }) =
             </div>
           </section>
 
-          {/* Section 2: current */}
-          <section id="current" className="scroll-mt-24">
+          {/* Section 2: experience */}
+          <section id="previously" className="scroll-mt-24">
             <h2 className="text-xs font-mono uppercase tracking-widest mb-6" style={{ color: 'var(--muted)' }}>
               02 // experience
             </h2>
-            <div
-              className={`content-card ${!matchesFilter(['ai & automation', 'python & ML']) ? 'opacity-40 grayscale' : ''}`}
-            >
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2">
-                <h3 className="text-xl font-bold" style={{ color: 'var(--text)' }}>
-                  ULimo
-                </h3>
-                <span className="text-xs font-mono" style={{ color: 'var(--accent)' }}>
-                  Feb. 2026 &ndash; Sep. 2026
-                </span>
-              </div>
-              <p className="text-sm font-semibold mb-4" style={{ color: 'var(--muted)' }}>
-                Software Automation Engineer Intern
-              </p>
-              <ul className="space-y-2 text-sm list-disc list-inside mb-4" style={{ color: 'var(--text)' }}>
-                <li>Reduced lead processing time to ∼5 min/lead by developing a n8n proof-of-concept outreach automation workflow</li>
-                <li>Enhanced AI Travel Agent UI/UX on Lovable by implementing role prompting with structured Markdown formatting</li>
-                <li>Increased automated follower acquisition by 20% by refining bot decision logic</li>
-                <li>Defined product positioning for AI Travel Agent through market analysis of ride-share and AI trip planners</li>
-              </ul>
-              <div className="flex flex-wrap gap-2">
-                <span className="chip-item">ai &amp; automation</span>
-                <span className="chip-item">python &amp; ML</span>
-                <span className="chip-item">n8n</span>
-                <span className="chip-item">PostgreSQL</span>
-              </div>
-            </div>
-          </section>
-
-          {/* Section 3: previously */}
-          <section id="previously" className="scroll-mt-24">
-            <h2 className="text-xs font-mono uppercase tracking-widest mb-6" style={{ color: 'var(--muted)' }}>
-              03 // previous experience
-            </h2>
             <div className="space-y-6">
+              {/* ULimo */}
               <div
-                className={`content-card ${!matchesFilter(['data & bi']) ? 'opacity-40 grayscale' : ''}`}
+                className={`content-card ${!matchesFilter(['ai & automation', 'python & ML']) ? 'opacity-40 grayscale' : ''}`}
               >
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2">
                   <h3 className="text-lg font-bold" style={{ color: 'var(--text)' }}>
-                    PwC x YouthBuild
+                    ULimo <span className="text-xs font-normal text-[var(--muted)]">New York, NY</span>
                   </h3>
-                  <span className="text-xs font-mono" style={{ color: 'var(--muted)' }}>
-                    Oct 2023 &ndash; Dec 2023
+                  <span className="text-xs font-mono text-[var(--accent)]">
+                    Feb. 2026 &ndash; Sep. 2026
                   </span>
                 </div>
                 <p className="text-sm font-semibold mb-3" style={{ color: 'var(--muted)' }}>
-                  Consulting Analyst Extern
+                  Software Automation Engineer Intern
                 </p>
                 <ul className="space-y-2 text-sm list-disc list-inside mb-4" style={{ color: 'var(--text)' }}>
-                  <li>Analyzed program performance datasets across 10+ operational metrics to identify key community engagement levers.</li>
-                  <li>Delivered data-driven strategic decks and Power BI dashboards to executive partners, driving actionable workforce development recommendations.</li>
+                  <li>Reduced lead processing time to ∼5 min/lead by developing a n8n proof-of-concept outreach automation workflow</li>
+                  <li>Defined product positioning for AI Travel Agent through market analysis of ride-share and AI trip planners</li>
+                  <li>Enhanced AI Travel Agent UI/UX on Lovable by implementing role prompting with structured Markdown formatting</li>
+                  <li>Increased automated follower acquisition by 20% by refining bot decision logic and error-handling pipelines for edge cases</li>
+                  <li>Partnered with leadership to deploy automation tools and track key operational performance metrics</li>
                 </ul>
                 <div className="flex flex-wrap gap-2">
-                  <span className="chip-item">data &amp; bi</span>
-                  <span className="chip-item">Power BI</span>
-                  <span className="chip-item">Data Analytics</span>
+                  <span className="chip-item">ai &amp; automation</span>
+                  <span className="chip-item">python &amp; ML</span>
+                  <span className="chip-item">n8n</span>
+                  <span className="chip-item">Lovable</span>
                 </div>
               </div>
+
               {/* PwC x YouthBuild */}
               <div
-                className={`content-card ${!matchesFilter(['data & bi']) ? 'opacity-40 grayscale' : ''}`}
+                className={`content-card ${!matchesFilter(['ai & automation', 'data & bi']) ? 'opacity-40 grayscale' : ''}`}
               >
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2">
                   <h3 className="text-lg font-bold" style={{ color: 'var(--text)' }}>
-                    PwC x YouthBuild
+                    PwC x YouthBuild <span className="text-xs font-normal text-[var(--muted)]">Extern Remote</span>
                   </h3>
                   <span className="text-xs font-mono" style={{ color: 'var(--muted)' }}>
-                    Oct 2023 &ndash; Dec 2023
+                    July 2026 &ndash; Aug. 2026
                   </span>
                 </div>
                 <p className="text-sm font-semibold mb-3" style={{ color: 'var(--muted)' }}>
                   Consulting Analyst Extern
                 </p>
                 <ul className="space-y-2 text-sm list-disc list-inside mb-4" style={{ color: 'var(--text)' }}>
-                  <li>Analyzed program performance datasets across 10+ operational metrics to identify key community engagement levers.</li>
-                  <li>Delivered data-driven strategic decks and Power BI dashboards to executive partners, driving actionable workforce development recommendations.</li>
+                  <li>Communicated human-AI collaboration recommendations clearly to YouthBuild Global’s CEO and PwC mentors</li>
+                  <li>Accelerated donor prospect research by 30% with AI tools that synthesized 10+ sources, saving 5+ hours weekly</li>
+                  <li>Engineered Corporate Donor Journey Map targeting &gt;2.5% email CTR, &gt;35% video play rate, &gt;15% web conversion</li>
+                  <li>Developed fundraising system targeting $50K+ cohort funding, &gt;14-day contract execution, 85%+ donor renewal rate</li>
                 </ul>
                 <div className="flex flex-wrap gap-2">
+                  <span className="chip-item">ai &amp; automation</span>
                   <span className="chip-item">data &amp; bi</span>
-                  <span className="chip-item">Power BI</span>
-                  <span className="chip-item">Data Analytics</span>
+                  <span className="chip-item">Strategic AI</span>
                 </div>
               </div>
 
               {/* Congero Technology Group */}
               <div
-                className={`content-card ${!matchesFilter(['data & bi', 'ai & automation']) ? 'opacity-40 grayscale' : ''}`}
+                className={`content-card ${!matchesFilter(['data & bi', 'ai & automation', 'python & ML']) ? 'opacity-40 grayscale' : ''}`}
               >
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2">
                   <h3 className="text-lg font-bold" style={{ color: 'var(--text)' }}>
-                    Congero Technology Group
+                    Congero Technology Group <span className="text-xs font-normal text-[var(--muted)]">Remote</span>
                   </h3>
                   <span className="text-xs font-mono" style={{ color: 'var(--muted)' }}>
-                    Jun 2022 &ndash; Aug 2022
+                    June 2026 &ndash; July 2026
                   </span>
                 </div>
                 <p className="text-sm font-semibold mb-3" style={{ color: 'var(--muted)' }}>
                   Data Analyst / AI Engineer Intern
                 </p>
                 <ul className="space-y-2 text-sm list-disc list-inside mb-4" style={{ color: 'var(--text)' }}>
-                  <li>Built SQL reporting scripts and ETL routines to consolidate revenue metrics across enterprise billing software.</li>
-                  <li>Prototyped internal NLP text classification models to route support tickets, shortening response times across 8+ billing schemas.</li>
+                  <li>Reduced query resolution across 8+ PostgreSQL schemas to 5 targeted tables by building a hybrid RAG AI Agent</li>
+                  <li>Improved retrieval accuracy by engineering an LLM-driven contextual enrichment pipeline before vectorization</li>
+                  <li>Delivered proof-of-concept AI agent using FastAPI and React to enable multi-turn, session-based conversations</li>
+                  <li>Led a team of 3 to configure 12 pricing models for 2 AI products in Oracle BRM to simulate scalable SaaS billing</li>
+                  <li>Built Tableau dashboards to visualize key revenue KPIs from configured product offerings for managers and stakeholders</li>
                 </ul>
                 <div className="flex flex-wrap gap-2">
                   <span className="chip-item">data &amp; bi</span>
                   <span className="chip-item">ai &amp; automation</span>
-                  <span className="chip-item">SQL</span>
-                  <span className="chip-item">Python</span>
+                  <span className="chip-item">python &amp; ML</span>
+                  <span className="chip-item">PostgreSQL</span>
+                  <span className="chip-item">FastAPI</span>
+                  <span className="chip-item">Tableau</span>
                 </div>
               </div>
             </div>
           </section>
 
-          {/* Section 4: education */}
+          {/* Section 3: education */}
           <section id="education" className="scroll-mt-24">
             <h2 className="text-xs font-mono uppercase tracking-widest mb-6" style={{ color: 'var(--muted)' }}>
-              04 // education
+              03 // education
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div className="content-card">
@@ -291,10 +269,10 @@ export const WorkView: React.FC<WorkViewProps> = ({ onOpenDonorSegmentation }) =
             </div>
           </section>
 
-          {/* Section 5: builds */}
+          {/* Section 4: builds */}
           <section id="builds" className="scroll-mt-24">
             <h2 className="text-xs font-mono uppercase tracking-widest mb-6" style={{ color: 'var(--muted)' }}>
-              05 // featured builds &amp; projects
+              04 // featured builds &amp; projects
             </h2>
             <div className="space-y-6">
               {/* Build 1: Donor Segmentation */}
@@ -304,23 +282,20 @@ export const WorkView: React.FC<WorkViewProps> = ({ onOpenDonorSegmentation }) =
               >
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">
                   <div className="flex items-center gap-2">
-                    <span className="px-2.5 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-emerald-500 text-white">
-                      Featured Case Study
-                    </span>
                     <h3 className="text-lg font-bold group-hover:text-[var(--accent)] transition-colors" style={{ color: 'var(--text)' }}>
                       Donor Segmentation &amp; Personalized Communication
                     </h3>
                   </div>
                   <span className="text-xs font-mono underline group-hover:no-underline" style={{ color: 'var(--accent)' }}>
-                    Read Case Study &rarr;
+                    Case Study &rarr;
                   </span>
                 </div>
                 <p className="text-sm leading-relaxed mb-4" style={{ color: 'var(--muted)' }}>
                   Automated RFM donor tiering and local LLM (Ollama / Llama 3.1) thank-you note drafting system integrated with n8n and Google Sheets. Reduced turnaround from 24+ hours to &lt; 2 minutes and saved 10+ hrs/wk of manual writing.
                 </p>
                 <div className="flex flex-wrap gap-2">
-                  <span className="chip-item">ai &amp; automation</span>
-                  <span className="chip-item">python &amp; ML</span>
+                  <span className="chip-item">automation workflow</span>
+                  <span className="chip-item">python</span>
                   <span className="chip-item">n8n</span>
                   <span className="chip-item">Ollama</span>
                   <span className="chip-item">Llama 3.1</span>
@@ -336,7 +311,7 @@ export const WorkView: React.FC<WorkViewProps> = ({ onOpenDonorSegmentation }) =
                     Olist E-Commerce ETL &amp; Analytics Pipeline
                   </h3>
                   <a
-                    href="https://github.com/TienNguyen93/olist-etl"
+                    href="https://github.com/TienNguyen93/olist-project"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-xs font-mono text-[var(--accent)] hover:underline"
@@ -345,14 +320,13 @@ export const WorkView: React.FC<WorkViewProps> = ({ onOpenDonorSegmentation }) =
                   </a>
                 </div>
                 <p className="text-sm leading-relaxed mb-4" style={{ color: 'var(--muted)' }}>
-                  Built a robust Python/SQL ETL pipeline processing 100K+ Brazilian e-commerce orders into PostgreSQL. Modeled relational schemas and executed complex analytical queries to uncover logistics bottlenecks and customer LTV.
+                  Built a robust Python/SQL ETL pipeline processing 100K+ Brazilian e-commerce orders into PostgreSQL. Modeled relational schemas and executed analytical queries to uncover logistics bottlenecks and customer LTV.
                 </p>
                 <div className="flex flex-wrap gap-2">
                   <span className="chip-item">data &amp; bi</span>
-                  <span className="chip-item">python &amp; ML</span>
-                  <span className="chip-item">PostgreSQL</span>
+                  <span className="chip-item">python</span>
+                  <span className="chip-item">PySpark</span>
                   <span className="chip-item">ETL</span>
-                  <span className="chip-item">Pandas</span>
                 </div>
               </div>
 
@@ -374,125 +348,53 @@ export const WorkView: React.FC<WorkViewProps> = ({ onOpenDonorSegmentation }) =
                   </a>
                 </div>
                 <p className="text-sm leading-relaxed mb-4" style={{ color: 'var(--muted)' }}>
-                  Developed an automated lead triage and dispatch workflow for service businesses using n8n, Webhooks, and SMS notifications. Streamlined client onboarding and service ticket assignment.
+                  Developed an automated lead triage and dispatch workflow for service businesses using n8n and Webhooks.
                 </p>
                 <div className="flex flex-wrap gap-2">
-                  <span className="chip-item">ai &amp; automation</span>
+                  <span className="chip-item">automation workflow</span>
                   <span className="chip-item">n8n</span>
                   <span className="chip-item">Webhooks</span>
-                  <span className="chip-item">Twilio API</span>
                 </div>
               </div>
 
-              {/* Build 4: Credit Card Fraud Detection */}
-              <div
-                className={`content-card ${!matchesFilter(['python & ML', 'data & bi']) ? 'opacity-40 grayscale' : ''}`}
-              >
-                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">
-                  <h3 className="text-lg font-bold" style={{ color: 'var(--text)' }}>
-                    Credit Card Fraud Detection Pipeline
-                  </h3>
-                  <a
-                    href="https://github.com/TienNguyen93/credit-card-fraud-detection"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-xs font-mono text-[var(--accent)] hover:underline"
-                  >
-                    GitHub &rarr;
-                  </a>
-                </div>
-                <p className="text-sm leading-relaxed mb-4" style={{ color: 'var(--muted)' }}>
-                  Implemented machine learning anomaly detection models (XGBoost, Random Forest, SMOTE) on highly imbalanced transaction datasets, achieving an ROC-AUC of 0.98.
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  <span className="chip-item">python &amp; ML</span>
-                  <span className="chip-item">data &amp; bi</span>
-                  <span className="chip-item">Scikit-learn</span>
-                  <span className="chip-item">XGBoost</span>
-                </div>
-              </div>
 
-              {/* Build 5: Clinical Note Generation */}
-              <div
-                className={`content-card ${!matchesFilter(['ai & automation', 'python & ML']) ? 'opacity-40 grayscale' : ''}`}
-              >
-                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">
-                  <h3 className="text-lg font-bold" style={{ color: 'var(--text)' }}>
-                    Clinical Note Generation &amp; Summarization
-                  </h3>
-                  <a
-                    href="https://github.com/TienNguyen93"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-xs font-mono text-[var(--accent)] hover:underline"
-                  >
-                    GitHub &rarr;
-                  </a>
-                </div>
-                <p className="text-sm leading-relaxed mb-4" style={{ color: 'var(--muted)' }}>
-                  Engineered a specialized fine-tuning and prompt pipeline using HuggingFace Transformers to summarize transcript dialogues into structured SOAP clinical notes.
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  <span className="chip-item">ai &amp; automation</span>
-                  <span className="chip-item">python &amp; ML</span>
-                  <span className="chip-item">PyTorch</span>
-                  <span className="chip-item">Transformers</span>
-                </div>
-              </div>
             </div>
           </section>
 
-          {/* Section 6: skills & tools */}
+          {/* Section 5: skills & tools */}
           <section id="skills-tools" className="scroll-mt-24">
             <h2 className="text-xs font-mono uppercase tracking-widest mb-6" style={{ color: 'var(--muted)' }}>
-              06 // skills &amp; tools
+              05 // skills &amp; tools
             </h2>
             <div className="space-y-6">
               {/* Category 1 */}
               <div className="content-card">
                 <h3 className="text-sm font-bold uppercase tracking-wider mb-3" style={{ color: 'var(--accent)' }}>
-                  AI &amp; Machine Learning
+                  skills
                 </h3>
                 <div className="flex flex-wrap gap-2">
-                  <span className="chip-item">Python</span>
-                  <span className="chip-item">PyTorch</span>
-                  <span className="chip-item">Scikit-learn</span>
-                  <span className="chip-item">Ollama (Llama 3.1)</span>
-                  <span className="chip-item">OpenAI API</span>
-                  <span className="chip-item">Prompt Engineering</span>
-                  <span className="chip-item">RAG Architectures</span>
-                  <span className="chip-item">HuggingFace</span>
+                  <span className="chip-item">data analysis</span>
+                  <span className="chip-item">automation workflow</span>
+                  <span className="chip-item">consulting</span>
+                  <span className="chip-item">leadership</span>
                 </div>
               </div>
 
               {/* Category 2 */}
               <div className="content-card">
                 <h3 className="text-sm font-bold uppercase tracking-wider mb-3" style={{ color: 'var(--accent)' }}>
-                  Data &amp; Analytics Engineering
+                  tools
                 </h3>
                 <div className="flex flex-wrap gap-2">
-                  <span className="chip-item">SQL (PostgreSQL, MySQL)</span>
-                  <span className="chip-item">ETL / ELT Pipelines</span>
-                  <span className="chip-item">Pandas &amp; NumPy</span>
-                  <span className="chip-item">Power BI &amp; Tableau</span>
-                  <span className="chip-item">Data Modeling (Star Schema)</span>
-                  <span className="chip-item">RFM Analytics</span>
-                </div>
-              </div>
-
-              {/* Category 3 */}
-              <div className="content-card">
-                <h3 className="text-sm font-bold uppercase tracking-wider mb-3" style={{ color: 'var(--accent)' }}>
-                  Automation &amp; Software Engineering
-                </h3>
-                <div className="flex flex-wrap gap-2">
-                  <span className="chip-item">n8n Orchestration</span>
-                  <span className="chip-item">REST APIs &amp; Webhooks</span>
-                  <span className="chip-item">TypeScript / React</span>
-                  <span className="chip-item">Tailwind CSS</span>
-                  <span className="chip-item">Git &amp; GitHub</span>
-                  <span className="chip-item">Docker</span>
-                  <span className="chip-item">Linux / Bash</span>
+                  <span className="chip-item">python</span>
+                  <span className="chip-item">antigravity</span>
+                  <span className="chip-item">n8n</span>
+                  <span className="chip-item">tableau</span>
+                  <span className="chip-item">sql</span>
+                  <span className="chip-item">github</span>
+                  <span className="chip-item">notion</span>
+                  <span className="chip-item">databricks</span>
+                  <span className="chip-item">canva</span>
                 </div>
               </div>
             </div>
